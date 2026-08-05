@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six Days in May — J.J. Bergin in the Great War</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #E7E1CE;
+    --paper-dark: #D8CEB0;
+    --paper-darker: #C9BD9A;
+    --ink: #232017;
+    --ink-soft: #4A4436;
+    --ink-faint: #7A7360;
+    --stamp-red: #9B3226;
+    --khaki: #5C6146;
+    --khaki-light: #7C8163;
+    --rule: #B9AE8E;
+    --card-bg: #F1ECDC;
+    --serif: 'Spectral', Georgia, serif;
+    --type: 'Special Elite', 'Courier New', monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 17px;
+    line-height: 1.65;
+    background-image:
+      repeating-linear-gradient(transparent, transparent 27px, rgba(90,80,50,0.05) 28px);
+  }
+
+  a { color: var(--stamp-red); }
+  a:focus-visible, button:focus-visible, .doc-card:focus-visible {
+    outline: 2px solid var(--stamp-red);
+    outline-offset: 3px;
+  }
+
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+
+  .eyebrow {
+    font-family: var(--type);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--khaki);
+  }
+
+  /* ---------- NAV ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+  }
+  nav .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+    padding-top: 14px; padding-bottom: 14px;
+  }
+  nav .brand {
+    font-family: var(--type);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  nav a { text-decoration: none; color: var(--ink-soft); }
+  nav a:hover { color: var(--stamp-red); }
+
+  .menu-toggle {
+    display: flex; align-items: center; gap: 8px;
+    background: none; border: 1px solid var(--ink); color: var(--ink-soft);
+    font-family: var(--type); font-size: 11.5px; letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 7px 14px; cursor: pointer;
+  }
+  .menu-toggle:hover { color: var(--stamp-red); border-color: var(--stamp-red); }
+  .menu-icon { font-size: 14px; line-height: 1; }
+
+  .nav-menu {
+    list-style: none; margin: 0; padding: 0;
+    max-height: 0; overflow: hidden;
+    background: var(--paper);
+    border-bottom: 1px solid transparent;
+    transition: max-height 0.25s ease, border-color 0.25s ease;
+  }
+  .nav-menu.open { max-height: 480px; border-bottom-color: var(--rule); }
+  .nav-menu li { border-top: 1px dotted var(--rule); }
+  .nav-menu li:first-child { border-top: 1px solid var(--rule); }
+  .nav-menu a {
+    display: block; padding: 13px 28px;
+    font-family: var(--type); font-size: 12px; letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .nav-menu a:hover { background: rgba(155, 50, 38, 0.06); }
+
+  /* ---------- HERO ---------- */
+  header.hero {
+    padding: 90px 0 70px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .ledger-pair {
+    display: flex; align-items: center; gap: 18px; margin-bottom: 34px;
+    flex-wrap: wrap;
+  }
+  .file-number {
+    font-family: var(--type);
+    font-size: clamp(30px, 6.75vw, 58px);
+    line-height: 1;
+    color: var(--ink);
+    position: relative;
+    padding: 6px 14px;
+    border: 1.5px solid var(--ink);
+  }
+  .file-number.mullan { color: var(--stamp-red); border-color: var(--stamp-red); }
+  .file-connector {
+    font-family: var(--type);
+    font-size: 13px;
+    color: var(--khaki);
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  .file-connector .rule {
+    display: block; width: 60px; height: 1px; background: var(--khaki);
+    margin: 6px auto;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(28px, 4.5vw, 48px);
+    line-height: 1.05;
+    margin: 0 0 22px;
+    letter-spacing: -0.01em;
+  }
+  .hero-sub {
+    max-width: 560px;
+    font-size: 19px;
+    color: var(--ink-soft);
+  }
+  .hero-sub b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- SECTION SCAFFOLD ---------- */
+  section { padding: 70px 0; border-bottom: 1px solid var(--rule); }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(26px, 4vw, 36px);
+    margin: 10px 0 24px;
+  }
+  .lede { font-size: 18px; color: var(--ink-soft); max-width: 620px; margin-bottom: 8px; }
+  .note {
+    font-family: var(--type);
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    border-left: 2px solid var(--rule);
+    padding-left: 12px;
+    margin-top: 26px;
+    line-height: 1.7;
+  }
+  .placeholder {
+    background: rgba(155, 50, 38, 0.06);
+    border: 1px dashed var(--stamp-red);
+    color: var(--stamp-red);
+    font-family: var(--type);
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 2px;
+  }
+
+  /* ---------- LEDGER TABLE ---------- */
+  .ledger {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 15px;
+  }
+  .ledger caption {
+    text-align: left;
+    font-family: var(--type);
+    font-size: 12px;
+    color: var(--khaki);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .ledger th, .ledger td {
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .ledger th {
+    font-family: var(--type);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: normal;
+  }
+  .ledger td.num { font-family: var(--type); }
+  .ledger tr:last-child td { border-bottom: 1px solid var(--ink); }
+
+  /* ---------- TIMELINE ---------- */
+  .timeline { margin-top: 40px; position: relative; }
+  .timeline::before {
+    content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px;
+    width: 1px; background: var(--rule);
+  }
+  .t-item { position: relative; padding-left: 34px; margin-bottom: 32px; }
+  .t-item:last-child { margin-bottom: 0; }
+  .t-item::before {
+    content: ""; position: absolute; left: 0; top: 5px;
+    width: 15px; height: 15px; border-radius: 50%;
+    background: var(--paper); border: 2px solid var(--khaki);
+  }
+  .t-date {
+    font-family: var(--type); font-size: 12px; color: var(--khaki);
+    letter-spacing: 0.05em; margin-bottom: 4px;
+  }
+  .t-title { font-weight: 600; font-size: 18px; margin-bottom: 4px; }
+  .t-body { color: var(--ink-soft); font-size: 15.5px; max-width: 560px; }
+
+  /* ---------- SPLIT PATHS ---------- */
+  .paths {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    margin-top: 40px;
+    border: 1px solid var(--ink);
+  }
+  @media (max-width: 700px) { .paths { grid-template-columns: 1fr; } }
+  .path {
+    padding: 32px;
+    position: relative;
+  }
+  .path + .path { border-left: 1px solid var(--ink); }
+  @media (max-width: 700px) {
+    .path + .path { border-left: none; border-top: 1px solid var(--ink); }
+  }
+  .path.bergin { background: var(--card-bg); }
+  .path.mullan { background: var(--paper-dark); }
+  .path-tag {
+    font-family: var(--type); font-size: 11px; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 3px 8px; display: inline-block;
+    border: 1px solid currentColor; margin-bottom: 16px;
+  }
+  .path.bergin .path-tag { color: var(--khaki); }
+  .path.mullan .path-tag { color: var(--stamp-red); }
+  .path h3 { font-size: 24px; margin: 0 0 6px; }
+  .path .path-role { font-family: var(--type); font-size: 12.5px; color: var(--ink-faint); margin-bottom: 18px; }
+  .path p { color: var(--ink-soft); font-size: 15.5px; }
+
+  /* ---------- DOCUMENT CARD (recreated record card) ---------- */
+  .doc-card {
+    margin-top: 22px;
+    background: #EDE7D3;
+    border: 1px solid var(--ink);
+    padding: 16px;
+    font-family: var(--type);
+    font-size: 11.5px;
+    line-height: 1.9;
+    transform: rotate(-0.4deg);
+    box-shadow: 3px 4px 0 rgba(35,32,23,0.12);
+    transition: transform 0.2s ease;
+  }
+  .doc-card:hover { transform: rotate(0deg); }
+  .path.mullan .doc-card { transform: rotate(0.5deg); }
+  .path.mullan .doc-card:hover { transform: rotate(0deg); }
+  .doc-row { display: flex; justify-content: space-between; border-bottom: 1px dotted var(--rule); padding: 3px 0; }
+  .doc-row span:first-child { color: var(--ink-faint); }
+  .doc-stamp {
+    display: inline-block; margin-top: 12px; padding: 4px 10px;
+    border: 1.5px solid var(--stamp-red); color: var(--stamp-red);
+    transform: rotate(-3deg); font-size: 11px; letter-spacing: 0.06em;
+  }
+
+  /* ---------- SOURCES GALLERY ---------- */
+  .gallery {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 32px;
+  }
+  @media (max-width: 700px) { .gallery { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 460px) { .gallery { grid-template-columns: 1fr; } }
+  .gcard {
+    aspect-ratio: 4/5;
+    border: 1px dashed var(--ink-faint);
+    background: repeating-linear-gradient(135deg, transparent, transparent 8px, rgba(90,80,50,0.05) 9px);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 16px; gap: 8px;
+  }
+  .gcard .gicon { font-family: var(--type); font-size: 26px; color: var(--ink-faint); }
+  .gcard .glabel { font-family: var(--type); font-size: 11.5px; color: var(--ink-soft); }
+  .gcard .ghint { font-size: 11px; color: var(--ink-faint); }
+
+  /* ---------- DOCUMENT SCAN ---------- */
+  .doc-image-link { display: inline-block; margin-top: 18px; }
+  .doc-image {
+    display: block; max-width: 100%; height: auto;
+    border: 1px solid var(--ink);
+    box-shadow: 3px 4px 0 rgba(35,32,23,0.12);
+  }
+  .doc-image-hint {
+    font-family: var(--type); font-size: 11px; color: var(--ink-faint);
+    margin-top: 6px;
+  }
+  .image-note {
+    font-family: var(--serif); font-size: 14.5px; color: var(--ink-soft);
+    line-height: 1.5; margin-top: 8px;
+  }
+  .video-thumb { max-width: 360px; }
+  .image-note-timeline {
+    position: relative; margin-top: 12px; padding-left: 20px;
+  }
+  .image-note-timeline::before {
+    content: ""; position: absolute; left: 4px; top: 5px; bottom: 5px;
+    width: 1px; background: var(--rule);
+  }
+  .image-note-timeline p {
+    position: relative; margin: 0 0 16px;
+    font-family: var(--serif); font-size: 14.5px; color: var(--ink-soft); line-height: 1.5;
+  }
+  .image-note-timeline p:last-child { margin-bottom: 0; }
+  .image-note-timeline p::before {
+    content: ""; position: absolute; left: -20px; top: 5px;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--paper); border: 2px solid var(--khaki);
+  }
+  .image-note-timeline p.quote {
+    font-family: var(--type); font-size: 13px; color: var(--ink);
+  }
+  .image-note-timeline p.analysis {
+    font-style: italic; color: var(--khaki-light);
+  }
+  .img-pair {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+    margin: 28px 0;
+  }
+  @media (max-width: 700px) { .img-pair { grid-template-columns: 1fr; } }
+  .img-pair .doc-image-link { margin-top: 0; width: 100%; }
+  .img-pair .doc-image { width: 100%; }
+  .img-trio {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;
+    margin: 28px 0;
+  }
+  @media (max-width: 700px) { .img-trio { grid-template-columns: 1fr; } }
+  .img-trio .doc-image-link { margin-top: 0; width: 100%; }
+  .img-trio .doc-image { width: 100%; }
+
+  /* ---------- SOURCE EXCERPT ---------- */
+  .excerpt {
+    margin-top: 30px;
+    background: var(--card-bg);
+    border-left: 3px solid var(--khaki);
+    padding: 20px 24px;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 16px;
+  }
+  .excerpt cite {
+    display: block; margin-top: 12px;
+    font-family: var(--type); font-style: normal;
+    font-size: 11.5px; color: var(--ink-faint);
+  }
+
+  /* ---------- MAP ---------- */
+  .map-box {
+    margin-top: 32px;
+    aspect-ratio: 16/8;
+    border: 1px dashed var(--ink-faint);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 10px; text-align: center; padding: 24px;
+    background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(90,80,50,0.04) 11px);
+  }
+  .map-box .glabel { font-family: var(--type); font-size: 13px; color: var(--ink-soft); }
+  .map-box .ghint { font-size: 13px; color: var(--ink-faint); max-width: 420px; }
+  code.inline {
+    background: rgba(90,80,50,0.08); padding: 1px 5px; font-size: 12.5px;
+    font-family: var(--type);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 50px 0 70px;
+    font-family: var(--type);
+    font-size: 12px;
+    color: var(--ink-faint);
+    line-height: 1.9;
+  }
+  footer .rule-top {
+    border-top: 1px solid var(--rule);
+    padding-top: 26px;
+  }
+
+  /* ---------- REVEAL ---------- */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">SIX DAYS IN MAY - J.J. BERGIN IN THE GREAT WAR</span>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">
+      <span class="menu-icon">☰</span> Menu
+    </button>
+  </div>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="#enlistment">Enlistment</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#before-arras">Before Arras</a></li>
+    <li><a href="#arras">Arras</a></li>
+    <li><a href="#monchy-le-preux">Monchy-le-Preux</a></li>
+    <li><a href="#capture">Capture</a></li>
+    <li><a href="#captivity">Captivity</a></li>
+    <li><a href="#return">Release &amp; Return</a></li>
+    <li><a href="#aftermath">Aftermath</a></li>
+    <li><a href="#new-life">The Long Way Home</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Royal Inniskilling Fusiliers</div>
+    <h1>John James Bergin</h1>
+    <p class="hero-sub">This is Jack's Great War story, gleaned and reconstructed from the surviving records and the few snippets and memories handed down orally to his children and grandchildren.</p>
+  </div>
+</header>
+
+<section id="enlistment">
+  <div class="wrap">
+    <div class="eyebrow">01 — Enlistment</div>
+    <h2>Before Enlistment</h2>
+    <div class="img-pair">
+      <div>
+        <a class="doc-image-link" href="Images/100-RIC%20-%20Buncrana%20New%20Police%20Station%201904%20copy.png" target="_blank" rel="noopener">
+          <img class="doc-image" src="Images/100-RIC%20-%20Buncrana%20New%20Police%20Station%201904%20copy.png" alt="Buncrana RIC barracks, 1904">
+        </a>
+        <div class="doc-image-hint">1916</div>
+        <div class="image-note">The station was relatively newly built back when Jack Bergin served there.</div>
+      </div>
+      <div>
+        <a class="doc-image-link" href="Images/110-RIC%20-%20Buncrana%20Old%20Garda%20Station%202026%20copy.png" target="_blank" rel="noopener">
+          <img class="doc-image" src="Images/110-RIC%20-%20Buncrana%20Old%20Garda%20Station%202026%20copy.png" alt="Buncrana Garda station, present day">
+        </a>
+        <div class="doc-image-hint">2026</div>
+        <div class="image-note">The building is unused now, awaiting a new purpose for the community of Buncrana.</div>
+      </div>
+    </div>
+    <p class="lede">Sergeant J.J. Bergin, served in the Royal Irish Constabulary in Buncrana before the war, and then in 1916 enlisted in the Royal Inniskilling Fusiliers, Reg. No. 29328. This was only weeks after the Easter Rising though he must have been contemplating joining up some time before that.</p>
+
+    <table class="ledger">
+      <caption>Attestation Ledger — Royal Inniskilling Fusiliers</caption>
+      <thead>
+        <tr><th>Name</th><th>Reg. No.</th><th>Rank</th><th>Enlisted</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>J.J. Bergin</td>
+          <td class="num">29328</td>
+          <td>Sergeant</td>
+          <td>May 1916</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">
+      Note: there are two other entries appear below Reg. No. 29331 in the same sequence — 29331 Hugh Mullan, &amp; 29337 James Mullen, who enlisted alongside him. Likely to be same enlistment office on the same day. More about them later.<br>
+      <br>
+      Source: War Medal Roll - UK National Archives
+    </div>
+    <a class="doc-image-link" href="Images/210-DOC-Medal%20roll%20both%20men%20in%201st%20Bn%20Natl%20Arch%20copy.png" target="_blank" rel="noopener">
+      <img class="doc-image" src="Images/210-DOC-Medal%20roll%20both%20men%20in%201st%20Bn%20Natl%20Arch%20copy.png" alt="War Medal Roll entry, 1st Battalion, UK National Archives">
+    </a>
+    <div class="doc-image-hint">Tap or click to view full size</div>
+    <div class="image-note">In the column next to names, there are entries '1. R Innis Fus', so Jack Bergin, Hugh Mullan and James Mullen were all assigned to the 1st Battalion Royal Inniskilling Fusiliers (1st Bn. was part of the regular standing army, not one of the so-called New Armies). </div>
+  </div>
+</section>
+
+<section id="training">
+  <div class="wrap">
+    <div class="eyebrow">02 — Training in Dublin</div>
+    <h2>Timeline - training &amp; deployment to France</h2>
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-date">MAY 1916</div>
+        <div class="t-title">Attestation</div>
+        <div class="t-body">Bergin enlists, Reg. No. 29328.</div>
+      </div>
+      <div class="t-item">
+        <div class="t-date">Sergerant's training duration is unknown, probably at least three months for that rank.</div>
+        <div class="t-title">Training</div>
+        <div class="t-body">At Portobello Barracks, Dublin. A battalion was probably not yet assigned until completion and a posting.</div>
+      </div>
+      <div class="t-item">
+        <div class="t-date">Late 1916 or early 1917</div>
+        <div class="t-title">Posted to France</div>
+        <div class="t-body">The 1st Battalion were already serving on the Western Front after returning from fighting at the Battle of Gallipoli in summer 1916. Jack remembers being in Amiens during the war, so it might well be that he travelled there with Hugh Mullan and James Mullen who were  assigned to the same battalion. This could explain why Jack and Hugh appeared in the same photo below from 02 June 1917.</div>
+      </div>
+    </div>
+    <div class="img-trio">
+      <div>
+        <a class="doc-image-link" href="Images/120-RIC%20-%20JJ%20Begin%20Training%20Portobello%20Evening%20Herald%2013%20May%20196%20copy.png" target="_blank" rel="noopener">
+          <img class="doc-image" src="Images/120-RIC%20-%20JJ%20Begin%20Training%20Portobello%20Evening%20Herald%2013%20May%20196%20copy.png" alt="Evening Herald, Portobello training, 13 May 1916">
+        </a>
+        <div class="doc-image-hint">List of new recruits</div>
+      </div>
+      <div>
+        <a class="doc-image-link" href="Images/130-RIC%20-%20JJ%20Begin%20Training%20Photo%20Portobello%20Evening%20Herald%201916%20copy.png" target="_blank" rel="noopener">
+          <img class="doc-image" src="Images/130-RIC%20-%20JJ%20Begin%20Training%20Photo%20Portobello%20Evening%20Herald%201916%20copy.png" alt="Portobello training photo, Evening Herald, 1916">
+        </a>
+        <div class="doc-image-hint">Jack Bergin second from left</div>
+        <div class="image-note">Here, on 13th May 1916, Jack is still wearing his RIC uniform. It obviously wasn't that long since he had enlisted, maybe just days.</div>
+      </div>
+      <div>
+        <a class="doc-image-link" href="Images/200-NEW%20-%20Somewhere%20In%20France%20with%20H%20Mullan%20Weekly%20Tel.%202%20Jun%201917%20copy.png" target="_blank" rel="noopener">
+          <img class="doc-image" src="Images/200-NEW%20-%20Somewhere%20In%20France%20with%20H%20Mullan%20Weekly%20Tel.%202%20Jun%201917%20copy.png" alt="Somewhere in France with H. Mullan, Weekly Telegraph, 2 June 1917">
+        </a>
+        <div class="doc-image-hint">Jack and Hugh Mullan (Amiens?)</div>
+        <div class="image-note">This could well have been taken in Amiens, a major staging point for troop movements. The caption refers to coming through action unscathed. News items were published weeks later than when they actually occurred. That action could well be fighting along the Somme. Jack's friend, Hugh Mullan, is listed as being from Dhroll, Donegal. It was actually Dhrung, Donegal, as we'll see later.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="before-arras">
+  <div class="wrap">
+    <div class="eyebrow">03 — Before Arras</div>
+    <h2>Before Arras</h2>
+    <p class="lede">The map below is a frontlines overview, showing major changes in the Western Front during the war. Amiens was briefly captured by the Germans in 1914 but quickly re-taken. Note the big change in the front lines around the Somme in 1916. The front line in early 1917 ran just east of Arras, but crucially, Monchy-le-Preux was in German hands.</p>
+    <p class="lede">The second map is a Google map view showing locations where the 1st Battalion were billeted or fought (using details from 1st Bn. regimental war diary). In January, he was generally around Amiens. In February and March, at the Somme battlefields (a battle fought between July and November 1916, where a crushing and almost unbelievable 1 million men were killed or wounded.) In April, the 1st Battalion was moved to the Arras sector in preparation for the attack on the German Hindenburg line that ran north to south, just to the east of Arras but just west of Monchy-le-Preux.</p>
+    <div class="gallery" style="grid-template-columns:1fr;">
+    <div>
+      <a class="doc-image-link" href="Images/220-MAP%20-%20Somme%20Arras%20Battle%20Fields%20World%20Hist%20Ency%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/220-MAP%20-%20Somme%20Arras%20Battle%20Fields%20World%20Hist%20Ency%20copy.png" alt="Western Front 1914 to 1917">
+      </a>
+      <div class="doc-image-hint">Western Front 1914 to 1917</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/230-MAP%20-%20JJB%20in%20France%20Overview%201917%20RIF%20diary%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/230-MAP%20-%20JJB%20in%20France%20Overview%201917%20RIF%20diary%20copy.png" alt="Locations of 1st Battalion during 1917">
+      </a>
+      <div class="doc-image-hint">Locations of 1st Battalion during 1917</div>
+      <div class="image-note">The regimental diary allows us to trace the movements of the 1st Battalion. January 1917 mainly around Amiens, February-March, along the Somme, and April-May near Arras.<br><br>Several pictures have been included here to portray the general conditions of the trenches and the in particular, some of the Irish regioments.
+      </div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/235-PHO%20-%20RIF%201st%20Battalion%20Cambrai%20Nov%201917%20IWM%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/235-PHO%20-%20RIF%201st%20Battalion%20Cambrai%20Nov%201917%20IWM%20copy.png" alt="RIF 1st Battalion in Cambrai 1917">
+      </a>
+      <div class="doc-image-hint">RIF 1st Battalion in Cambrai 1917</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/236-PHO%20-%20Royal_Irish_Rifles_ration_party_Somme_July_1916%20IWM%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/236-PHO%20-%20Royal_Irish_Rifles_ration_party_Somme_July_1916%20IWM%20copy.jpg" alt="Royal Irish Rifles in the Trenches">
+      </a>
+      <div class="doc-image-hint">Royal Irish Rifles in the Trenches</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/237-PHO%20-%20British-soldiers-with-german-wounded-somme-1916%20IWM%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/237-PHO%20-%20British-soldiers-with-german-wounded-somme-1916%20IWM%20copy.png" alt="British Soldiers with German Wounded on the Somme 1916">
+      </a>
+      <div class="doc-image-hint">British Soldiers with German wounded on the Somme 1916</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/238-PHO%20-%20The_Battle_of_the_Somme,_July-november_1916_Q4417%20IWM%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/238-PHO%20-%20The_Battle_of_the_Somme,_July-november_1916_Q4417%20IWM%20copy.jpg" alt="At the Battle of the Somme — a devastated landscape">
+      </a>
+      <div class="doc-image-hint">At the Battle of the Somme — a devastated landscape</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/241-NEW%20-%20Constabulary%20Gazette%2016%20June%201917%20JJB%20Gallantry%20Award%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/241-NEW%20-%20Constabulary%20Gazette%2016%20June%201917%20JJB%20Gallantry%20Award%20copy.png" alt="News of JJ Bergin&#x27;s gallantry published in June 1917">
+      </a>
+      <div class="image-note">Jack was commended for gallantry, probably due to actions in the Somme sector.
+      </div>
+      <div class="doc-image-hint">News of JJ Bergin's gallantry published in June 1917</div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="arras">
+  <div class="wrap">
+    <div class="eyebrow">04 — Arras</div>
+    <h2>Arras</h2>
+    <div class="gallery" style="grid-template-columns:1fr;">
+    <div>
+      <video id="arrasVideo" class="doc-image video-thumb" controls preload="metadata" poster="Images/247-PHO%20-%20FlyOverArras%20Video%20Thumbnail.png">
+        <source src="Images/FlyOverArras.mp4" type="video/mp4">
+      </video>
+      <div class="doc-image-hint">Aerial fly-over of Arras — click play to view full screen</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/245-PHO%20-%20Arras%20Apr-May%201917%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/245-PHO%20-%20Arras%20Apr-May%201917%20copy.jpg" alt="Main square in Arras Apr-May 1917 — a town in ruins">
+      </a>
+      <div class="doc-image-hint">Main square in Arras Apr-May 1917 — a town in ruins</div>
+      <div class="image-note">Arras had been captured briefly by the Germans in 1914. The town was largely in ruins. Tunnels were dug by the Newfoundlanders and in these tunnels the 1st Battalion sheltered  before being posted to front line near Monchy-le-Preux. (See extract from Francis Ledwidge biography later).</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/300-RIF%20-%20Regimental%20Diary%20May%201917%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/300-RIF%20-%20Regimental%20Diary%20May%201917%20copy.png" alt="War Diary of Royal Inniskilling Fusiliers 1st Battalion, May 1917">
+      </a>
+      <div class="doc-image-hint">War Diary of Royal Inniskilling Fusiliers 1st Battalion, May 1917</div>
+      <div class="image-note">The war diary of the 1st Bn. is a key document, containing a huge amount of information about what was happening on the ground. It is of course meant to be fairly banal but compared to the horrific reality of trench warfare, it feels almost callous. Only officers were named. Everyone else, including sergeants, were simply noted as O.R., other ranks.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/310-RIF%20-%20Regimental%20Battle%20Orders%206%20May%201917%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/310-RIF%20-%20Regimental%20Battle%20Orders%206%20May%201917%20copy.png" alt="Battle Order no. 14, 06 May — march to Duisans (near Arras)">
+      </a>
+      <div class="doc-image-hint">Battle Order no. 14, 06 May — march to Duisans (near Arras)</div>
+      <div class="image-note">This is a starting point for the action in which Jack fought and was captured. Bn. Order No. 14 commands the battalion to march on May 13th to Duisans near Arras. Another order No. 16, cocmmands the regiment onwards to the front lines on the evening of 14/15 May (see order No. 16 below).</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/320-MAP%20-%20Marching%20map%20in%20Arras%20area%20prior%20to%20front%20line%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/320-MAP%20-%20Marching%20map%20in%20Arras%20area%20prior%20to%20front%20line%20copy.png" alt="Map showing movement of 1st Battalion early May up to 14th May">
+      </a>
+      <div class="doc-image-hint">Map showing movement of 1st Battalion early May up to 14th May</div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="monchy-le-preux">
+  <div class="wrap">
+    <div class="eyebrow">05 — Monchy-le-Preux</div>
+    <h2>Monchy-le-Preux</h2>
+    <div class="gallery" style="grid-template-columns:1fr;">
+    <div>
+      <a class="doc-image-link" href="Images/250-PHO%20-%20Monchy%2002%20Apr%201917%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/250-PHO%20-%20Monchy%2002%20Apr%201917%20copy.jpg" alt="Monchy-le-Preux, 2 April 1917 — a scene of devastation">
+      </a>
+      <div class="doc-image-hint">Monchy-le-Preux, 2 April 1917 — a scene of devastation</div>
+      <div class="image-note">There wasn't much left of Monchy-le-Preux after Commonwealth forces had captured the village on 11 April. The Germans tried to retake it a few days later, on 14 April — that's the action where a handful of Newfoundland Regiment survivors famously held the village virtually alone against a much larger German force, until British reinforcements arrived mid-afternoon. There is now a prominent memorial to the Newfoundlanders in Monchy-le-Preux.<br><br>The front lines were re-established just to the east of Monchy.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/260-PHO%20-%20Dressing%20Station%20near%20Monchy%2024%20Apr%201917%20large_000000%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/260-PHO%20-%20Dressing%20Station%20near%20Monchy%2024%20Apr%201917%20large_000000%20copy.jpg" alt="A dressing station near Monchy-le-Preux, 24 April 1917">
+      </a>
+      <div class="doc-image-hint">A dressing station near Monchy-le-Preux, 24 April 1917</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/270-PHO%20-%20Outskirts%20Monchy-le-Preux%2030%20May%201917%20%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/270-PHO%20-%20Outskirts%20Monchy-le-Preux%2030%20May%201917%20%20copy.jpg" alt="Monchy-le-Preux, 30 May 1917 — in ruins, dead horses in the foreground">
+      </a>
+      <div class="doc-image-hint">Monchy-le-Preux, 30 May 1917 — in ruins, dead horses in the foreground</div>
+    </div>
+    <div class="image-note">The next map below shows the advances made by the British against the Germans from Arras out to the east to Monchy-le-Preux. Action was bogged down close to Monchy along the Hindenburg Line, a line of fortifications that the Germans retreated to to make their front line more easily defensible.</div>
+    <div>
+      <a class="doc-image-link" href="Images/280-MAP%20-%20Usma_battle_of_arras_1917%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/280-MAP%20-%20Usma_battle_of_arras_1917%20copy.png" alt="Map of Arras and change in front line positions close to Monchy-le-Preux">
+      </a>
+      <div class="doc-image-hint">Map of Arras and change in front line positions close to Monchy-le-Preux</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/290-PHO%20-%20monchy-captured-august-1918-19704730968-5ea02c%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/290-PHO%20-%20monchy-captured-august-1918-19704730968-5ea02c%20copy.jpg" alt="Monchy-le-Preux from the air — August 1918, roads cleared">
+      </a>
+      <div class="doc-image-hint">Monchy-le-Preux from the air — August 1918, roads cleared</div>
+      <div class="image-note">The photograph above was taken in August 1918 but is a good illustration of the destruction of Monchy-le-Preux. Roads have been cleared. In April 1917, it would have been largely rubble.<br><br>Here is Battalion Order No. 16, Jack's last written order passed down.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/330-RIF%20-%20Regimental%20Battle%20Orders%20%2316%20for%2014%20May%201917%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/330-RIF%20-%20Regimental%20Battle%20Orders%20%2316%20for%2014%20May%201917%20copy.png" alt="Battle Order #16 — 14 May 1917">
+      </a>
+      <div class="doc-image-hint">Battle Order #16 — 14 May 1917</div>
+      <div class="image-note">Jack served in Company B as his POW record shows. Along with company A, they were to relieve the Gordons Fusiliers on the night of the 14th May, taking a place on Shrapnel Trench running north to south, between Grape and Canister. Shrapnel was just behind a forward line which in turn was only around 150m from the heavily defended, Hook Trench.<br><br>Another part of the regiment (C and D company and part of B), went to an area just north, near a wood called Twin Copse. However, Hook Trench was the main part of the German lines that lay in front of Infantry Hill and the Hindenburg line and since this is where night patrols to reconnoitre Hook Trench were needed, then I think Canister Trench is a far more likely location for Jack's part of Company B.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/340-MAP%20-%20Map%20of%20the%20Trenches%20around%20Monchy%20le%20Preux_edited%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/340-MAP%20-%20Map%20of%20the%20Trenches%20around%20Monchy%20le%20Preux_edited%20copy.jpg" alt="Map of trenches east of Monchy in May 1917">
+      </a>
+      <div class="doc-image-hint">Map of trenches east of Monchy in May 1917</div>
+      <div class="image-note">Red line is an approximate position for Hook Trench. Shrapnel and Canister are visible.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/350-MAP%20-%20Google%202026%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/350-MAP%20-%20Google%202026%20copy.png" alt="Monchy-le-Preux, 2026 — note the shape made by the roads">
+      </a>
+      <div class="doc-image-hint">Monchy-le-Preux, 2026 — note the shape made by the roads</div>
+      <div class="image-note">Present day Google Maps area of previous trench map.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/360-MAP%20-%20German%20Trench%20Map%20Hook%20Trench%20-%20maybe%20March%20or%20April%201917%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/360-MAP%20-%20German%20Trench%20Map%20Hook%20Trench%20-%20maybe%20March%20or%20April%201917%20copy.png" alt="Map showing Hook Trench (part of German defensive line)">
+      </a>
+      <div class="doc-image-hint">Map showing Hook Trench (part of German defensive line)</div>
+      <div class="image-note">German trench map with roads highlighted in purple. The 'hook' of Hook Trench is clearly visible. The hook allowed a German machine gun position to easily strafe oncoming attackers, so-called enfilade fire, a devastating technique that resulted in huge numbers of killed and wounded.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/370-MAP%20-%20Battle%20Lines%20Monchy%20Le%20Preux%20incl%20Canister%20Avenue%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/370-MAP%20-%20Battle%20Lines%20Monchy%20Le%20Preux%20incl%20Canister%20Avenue%20copy.png" alt="Another map showing Canister and Shrapnel trenches clearly">
+      </a>
+      <div class="doc-image-hint">Another map showing Canister and Shrapnel trenches clearly</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/375-PHO%20-%20Typical%20Trench%20attack%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/375-PHO%20-%20Typical%20Trench%20attack%20copy.png" alt="Aerial view of trench warfare — soldiers visible in forward shell crater">
+      </a>
+      <div class="doc-image-hint">Aerial view of trench warfare — soldiers visible in forward shell crater</div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="capture">
+  <div class="wrap">
+    <div class="eyebrow">06 — Reconnoitre and Capture</div>
+    <h2>Action on 15-18 May 1917</h2>
+    <div class="gallery" style="grid-template-columns:1fr;">
+    <div>
+      <a class="doc-image-link" href="Images/380-RIF%20-%20Regimental%20Diary%20May%201st-19th%201917%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/380-RIF%20-%20Regimental%20Diary%20May%201st-19th%201917%20copy.png" alt="RIF War Diary for 14–19 May 1917">
+      </a>
+      <div class="doc-image-hint">RIF War Diary for 14–19 May 1917</div>
+      <div class="image-note-timeline">
+        <p class="analysis">Diary wording for 14-19 May 1917: we can imagine a cool, damp evening. There was a waning moon on these dates. </p>
+        <p class="quote">March from ARRAS to front line + take over from 1st Gordons. Vide Bn. orders No. 16 &amp; dispositions attached. Officers' patrols go out nightly.</p>
+        <p class="quote">Enemy holds HOOK TRENCH. Snipers active &amp; intermittent shelling. 4 killed 8 wounded, 1 missing.</p>
+        <p class="analysis">We can imagine Sgt Bergin receiving orders to take part in a night patrol on 18 May, maybe with orders to reach Hook Trench, maybe to capture a German soldier. Knowing that night patrols were being fired on on previous nights, and that others had been lost for the nights before, we can merely try to imagine what Jack thought and felt at these orders.</p>
+        <p class="analysis">Records from Commonwealth War Graves Commission show that 4 men of the 1st Bn. died between 15 and 18 May 1917, and since their bodies were never found, they are memorialised on the Arras Memorial. The 8 wounded during this time period, obviously made it back to the trenches at least. That leaves 1 missing. Jack himself noted his own capture was on 19 May. He is the 'missing' man.</p>
+        <p class="quote">Attack [..on 19 May from 19:00..] carried out in accordance with attached B.O. 17. The attack fails owing to severe casualties from M.G. fire. Entire party reach their objective but are outnumbered. Lieut Aitcheson effects a lodgement in HOOK TRENCH with about 20 men but nothing more is heard of them.</p>
+        <p class="quote">Casualties: Capt. Osman, 2/Lt McGrane, Lt Hepworth killed. 2/Lt Somers died of wounds. Lt Glancy &amp; 2/Lt Hornage W. &amp; missing. Lieut Hall missing. Lt Aitcheson W. &amp; missing. 2/Lt Graham wounded. O.R. 192 K, W. &amp; M.</p>
+      </div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/390-MAP%20-%20Aerial%20Photo%20After%20Battle%20of%20Hook%20Trench%20-%20a%20blasted%20landscape%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/390-MAP%20-%20Aerial%20Photo%20After%20Battle%20of%20Hook%20Trench%20-%20a%20blasted%20landscape%20copy.png" alt="Aerial photo overlaid on Google map showing the effect of artillery">
+      </a>
+      <div class="doc-image-hint">Aerial photo overlaid on Google map showing the effect of artillery</div>
+      <div class="image-note">This aerial image shows that the ground east of Monchy-le-Preux was churned and turned by shells into a cratered, blasted landscape. Canister Trench is just visible and marked. Hook Trench is marked on the right. A later newspaper item reported Jack's capture, and noted that he lay in a trench (most likely Hook Trench, or perhaps a small forward lookout or machine gun branch trench at right angles to the main trench) for 12 hours before attempting to escape. So it was here, sometime in the morning of 19th May that his movements were noticed and he was made prisoner. Considering what had happened in the days before and that a major artillery barrage and an infantry attack by the British was about to take place that very evening at 19:00, this very good fortune. Many had died and  many would still perish, but this is why Jack survived.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/400-MAP%20-%20Body%20Density%20Map%20Arras%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/400-MAP%20-%20Body%20Density%20Map%20Arras%20copy.png" alt="Body Density Map of the trenches">
+      </a>
+      <div class="doc-image-hint">Body Density Map of the trenches</div>
+      <div class="image-note">Hundreds of men were lost in the failed attack of the 19th May on Hook Trench. This map probably underestimates the number of dead by a wide margin. Mass graves, isolated unmarked remains found later during concentration work, and men whose graves were destroyed or lost to further shelling could all be undercounted. The battle for Hook Trench and the German defences beyond that was a bloodbath.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/410-DOC%20-%20Ledwidge%20AB%20with%20JJ%20Bergins%20handwriting%2019%20May%20POW%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/410-DOC%20-%20Ledwidge%20AB%20with%20JJ%20Bergins%20handwriting%2019%20May%20POW%20copy.jpg" alt="From the biography of the poet Francis Ledwidge, who served in 1st Battalion">
+      </a>
+      <div class="doc-image-hint">From the biography of the poet Francis Ledwidge, who served in 1st Battalion</div>
+      <div class="image-note">This Ledwidge biography extract is a cross reference to the tunnels in Arras, the cellars of Monchy-le-Preux and the rivers of blood shed for little advance.<br><br>Commonwealth War Graves Comission (CWGC) records show that four 1st Battalion men  died during the nightly patrols 15-18 May 1917. I'm sure that Jack knew these men. One was Private James Gibson from Belfast. They were never found and so they are memorialised on the main British memorial in Arras. James Gallagher and John McCullough are listed as dying on 18 April. It would be plausible and maybe likely, to say that they were out on the same patrol as Jack and took bullets from the sniper fire reported. Since their bodies were not found, they must have died closer to German lines than British ones. Together with the fact that Jack lay in a German trench for twelve hours before attempting to escape, paints a picture: the three of them made it to Hook Trench, and it was not snipers but direct fire that killed the two others. In the confusion (shelling was intermittent), Jack was able to to 'play dead' with his two poor comrades beside him.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/420-DOC%20-%204%20x%20died%20at%20Monchy%20from%201st%20Bn%20RIF%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/420-DOC%20-%204%20x%20died%20at%20Monchy%20from%201st%20Bn%20RIF%20copy.png" alt="For the period 15–18 May, 4 died, matching the diary entry">
+      </a>
+      <div class="doc-image-hint">For the period 15–18 May, four men died, matching the diary entry</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/425-DOC%20-%20CWGC%2018%20June%201917%20James%20Mullen%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/425-DOC%20-%20CWGC%2018%20June%201917%20James%20Mullen%20copy.png" alt="James Mullen listed as wounded, died in a military hospital on 18 June 1917">
+      </a>
+      <div class="doc-image-hint">James Mullen listed as wounded, died in a military hospital on 18 June 1917</div>
+      <div class="image-note">James Mullen died on 18 June 1917. He was from Ballina and it seems that he had joined up on the same day as Jack and Hugh Mullan at the same enlistment office. He was wounded sometime in 1917 after arriving in France, but it's not too hard to believe that he fought with the 1st Battalion alongside Jack and Hugh and his wounds occurred during these days of action around Monchy.</div>
+    </div>
+    <div>
+        <a class="doc-image-link" href="Images/426-DOC%20-%20CWGC%20James%20Mullen%20Headstone%20died%2018th%20June%201917.png" target="_blank" rel="noopener">
+                <img class="doc-image" src="Images/426-DOC%20-%20CWGC%20James%20Mullen%20Headstone%20died%2018th%20June%201917.png" alt="James Mullen&#x27;s gravestone information — Etaples, near Le Touquet">
+        </a>
+      <div class="doc-image-hint">James Mullen's gravestone information — Etaples, near Le Touquet</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/440-PHO%20-%20Arras%20memorial%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/440-PHO%20-%20Arras%20memorial%20copy.png" alt="Arras War Memorial">
+      </a>
+      <div class="doc-image-hint">Arras War Memorial</div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="captivity">
+  <div class="wrap">
+    <div class="eyebrow">07 — Captivity</div>
+    <h2>Jack Bergin, POW</h2>
+    <div class="gallery" style="grid-template-columns:1fr;">
+    <div>
+      <a class="doc-image-link" href="Images/500-NEW%20-%20JJB%20not%20in%20captivity%204th%20Aug%201917%20-%2012hrs%20in%20trench%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/500-NEW%20-%20JJB%20not%20in%20captivity%204th%20Aug%201917%20-%2012hrs%20in%20trench%20copy.jpg" alt="Newspaper report on Jack Bergin from 04 August 1917">
+      </a>
+      <div class="doc-image-hint">Newspaper report on Jack Bergin from 04 August 1917</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/510-NEW%20-%20Newspaper%20JJ%20Bergin%20in%20captivity%20not%20missing%2014%20Aug%201917%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/510-NEW%20-%20Newspaper%20JJ%20Bergin%20in%20captivity%20not%20missing%2014%20Aug%201917%20copy.png" alt="Newspaper report from 14 Aug 1917">
+      </a>
+      <div class="doc-image-hint">Newspaper report from 14 Aug 1917</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/520-MAP%20-%20Possible%20Rail%20Route%20From%20Moncy%20to%20Dulmen%20then%20Soltau%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/520-MAP%20-%20Possible%20Rail%20Route%20From%20Moncy%20to%20Dulmen%20then%20Soltau%20copy.png" alt="Possible rail route to Soltau POW Camp">
+      </a>
+      <div class="doc-image-hint">Possible rail route to Soltau POW Camp</div>
+      <div class="image-note">ICRC record card notes travel via Lille and Dülmen. The route map above is a plausible way he might have arrived at Dülmen, the transit camp and then onwards to Soltau Camp near Hanover (also known as Heestemoor Camp).</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/530-PRS%20-%20Prisoner%20Record%20ICRC%20C_G1_E_15_01_0007_1629_0%20copy.JPG" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/530-PRS%20-%20Prisoner%20Record%20ICRC%20C_G1_E_15_01_0007_1629_0%20copy.JPG" alt="Red Cross record for Jack Bergin">
+      </a>
+      <div class="doc-image-hint">Red Cross record for Jack Bergin</div>
+      <div class="image-note">The record card states capture on 18th May not the 19th, however, the evening of the 18th was when the patrol would have gone out. The card confirms 1st Battalion, B Company. Eliza Street, where Jack's parents lived, no longer exists. His parents were notified on 22 June of his improsinment. Malachy McMichael recalls that Kate Maguire, Jack's fiance, was told a little later (presumably by letter) and she could hardly contain her happiness.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/540-PRS%20-%20ICRC%20Arrival%20Record%20C_G1_E_04_01_0058_0119%20copy.JPG" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/540-PRS%20-%20ICRC%20Arrival%20Record%20C_G1_E_04_01_0058_0119%20copy.JPG" alt="Prisoner arrivals record">
+      </a>
+      <div class="doc-image-hint">Prisoner arrivals record</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/710-MAP%20-%20Dulmen%20Camp%20Layout%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/710-MAP%20-%20Dulmen%20Camp%20Layout%20copy.png" alt="Dülmen Camp layout">
+      </a>
+      <div class="doc-image-hint">Dülmen Camp layout</div>
+      <div class="image-note">Map of Dülmen Transit Camp. The highlighted building, the camp Commandant's office or home, at the bottom still exists and is a private residence. The rest is a lake (Silbersee) and holiday resort. (See here for more info - in German: https://www.wn.de/muensterland/ein-lager-fur-10000-kriegsgefangene-in-dulmen-1897381?npg= )</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/720-PHO%20-%20General%20Dulmen%20Photo%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/720-PHO%20-%20General%20Dulmen%20Photo%20copy.jpg" alt="Typical picture from within Dülmen Camp">
+      </a>
+      <div class="doc-image-hint">Typical picture from within Dülmen Camp</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/730-PHO%20-%20Dulmen%20Camp%20Entrance%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/730-PHO%20-%20Dulmen%20Camp%20Entrance%20copy.png" alt="Dülmen Camp entrance">
+      </a>
+      <div class="doc-image-hint">Dülmen Camp entrance</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/740-PHO%20-%20Dulmen%20Camp%20Main%20Avenue%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/740-PHO%20-%20Dulmen%20Camp%20Main%20Avenue%20copy.png" alt="Dülmen Camp — main avenue">
+      </a>
+      <div class="doc-image-hint">Dülmen Camp — main avenue</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/750-DOC%20-%20JJ%20Bergin%20POW%20Dulmen%20camp%20postcard%20front%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/750-DOC%20-%20JJ%20Bergin%20POW%20Dulmen%20camp%20postcard%20front%20copy.jpg" alt="Postcard sent on behalf of Jack Bergin">
+      </a>
+      <div class="doc-image-hint">Postcard sent on behalf of Jack Bergin</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/760-DOC%20-%20JJ%20Bergin%20POW%20Dulmen%20camp%20postcard%20rear%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/760-DOC%20-%20JJ%20Bergin%20POW%20Dulmen%20camp%20postcard%20rear%20copy.jpg" alt="Rear of postcard sent on behalf of Jack Bergin">
+      </a>
+      <div class="doc-image-hint">Rear of postcard sent on behalf of Jack Bergin</div>
+      <div class="image-note">After Dülmen, Jack was moved at one point to a camp near the town of Soltau, Lower Saxony. Nearest city, Hannover. It was one of the largest WW1 camps and housed mainly other-ranks Russian and Eastern European POWs. I found no records indicating whether Jack lived solely in the main camp or was in effect a farm-labourer outside the camp. The photograph from this period shows Jack in a uniform so living in the camp seems more likely than not.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/760-PHO%20-%20Soltau%20Overview%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/760-PHO%20-%20Soltau%20Overview%20copy.jpg" alt="Overview of Soltau Camp">
+      </a>
+      <div class="doc-image-hint">Overview of Soltau Camp</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/770-PHO%20-%20Soltau%20Camp%20Perimeter%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/770-PHO%20-%20Soltau%20Camp%20Perimeter%20copy.png" alt="Soltau Camp perimeter">
+      </a>
+      <div class="doc-image-hint">Soltau Camp perimeter</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/780-PHO%20-%20Soltau%20Camp%20POWs%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/780-PHO%20-%20Soltau%20Camp%20POWs%20copy.png" alt="POWs in Soltau Camp">
+      </a>
+      <div class="doc-image-hint">POWs in Soltau Camp</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/790-PHO%20-%20Pig%20Rearing%20in%20Soltau%20Camp%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/790-PHO%20-%20Pig%20Rearing%20in%20Soltau%20Camp%20copy.png" alt="Pig rearing in Soltau Camp">
+      </a>
+      <div class="doc-image-hint">Pig rearing in Soltau Camp</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/800-PHO%20-%20Soltau_football%20life%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/800-PHO%20-%20Soltau_football%20life%20copy.jpg" alt="Football team in Soltau Camp">
+      </a>
+      <div class="doc-image-hint">Football team in Soltau Camp</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/810-DOC%20-%20Postcard%20front%20JJ%20Bergin%20POW%20-%20With%20J%20Mahony%20copy.jpg.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/810-DOC%20-%20Postcard%20front%20JJ%20Bergin%20POW%20-%20With%20J%20Mahony%20copy.jpg.jpg" alt="Postcard from Soltau Camp with Jerry Mahony">
+      </a>
+      <div class="doc-image-hint">Postcard from Soltau Camp with Jerry Mahony on the left, and Sidney Bowtell seated, both Royal Munster Fusiliers.</div>
+      <div class="image-note">This is a photograph from Jack's time in the camp. The original is the possession of Paul McMichael who given it by Maureen Bergin. Jack may have posed with two others at random, or they may be from the same hut, or indeed they might have been friends in some manner.<br><br>From Irish Census records and medal records, Jerry Mahony was from Ballina.<br><br>Bowtell was an Englishman (Church of England, married to Mary, a Catholic, probably Irish). They were married and living in Dublin, running a boarding house by the time of 1926 Irish Census.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/820-DOC%20-%20Postcard%20JJ%20Bergin%20POW%20rear%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/820-DOC%20-%20Postcard%20JJ%20Bergin%20POW%20rear%20copy.jpg" alt="Rear of postcard from Soltau Camp">
+      </a>
+      <div class="doc-image-hint">Rear of postcard from Soltau Camp</div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="return">
+  <div class="wrap">
+    <div class="eyebrow">08 — Release &amp; Return</div>
+    <h2>Coming Home</h2>
+    <div class="gallery" style="grid-template-columns:1fr;">
+    <div>
+      <a class="doc-image-link" href="Images/900-PHO%20-%20Two%20British%20POWS%20freedom%2014%20Nov%201918%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/900-PHO%20-%20Two%20British%20POWS%20freedom%2014%20Nov%201918%20copy.jpg" alt="Two British POWs enjoy a meal just after the Armistice, 14 Nov">
+      </a>
+      <div class="doc-image-hint">Two British POWs enjoy a meal just after the Armistice, 14 Nov</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/910-MAP%20-%20Possible%20Rail%20Route%20From%20Monchy%20to%20Dulmen%20then%20Soltau%20copy%202.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/910-MAP%20-%20Possible%20Rail%20Route%20From%20Monchy%20to%20Dulmen%20then%20Soltau%20copy%202.png" alt="Rail routes back to Channel or North Sea ports in the UK">
+      </a>
+      <div class="doc-image-hint">Rail routes back to Channel or North Sea ports in the UK</div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="aftermath">
+  <div class="wrap">
+    <div class="eyebrow">09 — Aftermath</div>
+    <h2>Aftermath</h2>
+    <div class="gallery" style="grid-template-columns:1fr;">
+    <div>
+      <a class="doc-image-link" href="Images/920-PHO%20-%20JJ%20Bergin%20in%20France%20with%20Hugh%20Mullan%20-%20Copy%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/920-PHO%20-%20JJ%20Bergin%20in%20France%20with%20Hugh%20Mullan%20-%20Copy%20copy.png" alt="Jack Bergin with Hugh Mullan before their battles">
+      </a>
+      <div class="doc-image-hint">Jack Bergin with Hugh Mullan before their battles</div>
+      <div class="image-note">What happened to Jack's pal, Hugh Mullan?</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/930-DOC%20-%20Hugh%20Mullan%20Dhrung%20Donegal%20Census%201901%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/930-DOC%20-%20Hugh%20Mullan%20Dhrung%20Donegal%20Census%201901%20copy.png" alt="Hugh Mullan&#x27;s 1901 Census record">
+      </a>
+      <div class="doc-image-hint">Hugh Mullan's 1901 Census record</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/935-DOC%20-%20Hugh%20Mullan%20Medal%20Record%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/935-DOC%20-%20Hugh%20Mullan%20Medal%20Record%20copy.png" alt="Hugh Mullan&#x27;s medal record">
+      </a>
+      <div class="doc-image-hint">Hugh Mullan's medal record</div>
+      <div class="image-note">Hugh's medal record shows that he was discharged on 23 June 1918. A 'W' on the right probably indicates that he was wounded. Note: he enlisted on 17 May 1916, and it seems this was on the same day as Jack Bergin. However the earlier newspaper photograph of Jack at Portobello was published 13 May, a slight mismatch.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/940-DOC%20-%20Hugh%20Mullan%20Dhrung%20Donegal%20Census%201926%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/940-DOC%20-%20Hugh%20Mullan%20Dhrung%20Donegal%20Census%201926%20copy.png" alt="Hugh Mullan&#x27;s 1926 Census record">
+      </a>
+      <div class="doc-image-hint">Hugh Mullan's 1926 Census record</div>
+      <div class="image-note">After his discharge Hugh went home and took over the family farm in Dhrung, Donegal (near Moville). He was married to Mary Ann by 1926 with two children, Bernard and Samuel.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/970-DOC%20-%20Jerry%20Mahony%20with%20JJ%20Bergin%20copy.jpg" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/970-DOC%20-%20Jerry%20Mahony%20with%20JJ%20Bergin%20copy.jpg" alt="Jack Bergin and Jerry Mahony in Soltau Camp, 1918">
+      </a>
+      <div class="doc-image-hint">Jack Bergin and Jerry Mahony in Soltau Camp, 1918</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/980-DOC%20-%20JeremiahMahony%20ICRC%20card%20copy.JPG" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/980-DOC%20-%20JeremiahMahony%20ICRC%20card%20copy.JPG" alt="Jerry Mahony&#x27;s ICRC arrival card — captured at Ypres, Nov 1917">
+      </a>
+      <div class="doc-image-hint">Jerry Mahony's ICRC arrival card — captured at Ypres, Nov 1917</div>
+      <div class="image-note">Jerry Mahony's ICRC record card has a lot of details from which we can confirm his identity. He was born in Sneem, Co. Kerry in 1893. He was captured at Ypres on 10 November 1917 (which was the first day of the Battle of Passchendaele, the 3rd Battle of Ypres). This was his good fortune. 500,000 were killed and wounded during this battle. He was transferred to Soltau from Dülmen about a month later, so we might speculate that Jack Bergin spent a month at Dülmen too.</div>
+    </div>
+    <div>
+      <a class="doc-image-link" href="Images/990-DOC%20-%20Jerry%20Mahony%201926%20Census1%20copy.png" target="_blank" rel="noopener">
+        <img class="doc-image" src="Images/990-DOC%20-%20Jerry%20Mahony%201926%20Census1%20copy.png" alt="1926 Census record — Jerry is a farmer with a family in Kilconnell, Galway">
+      </a>
+      <div class="doc-image-hint">1926 Census record — Jerry is a farmer with a family in Kilconnell, Galway</div>
+      <div class="image-note">Jerry moved to Galway on his return from war and was a farmer in Kilconnell, Co. Galway. He married Kathleen and had three children Gerard, Stephen and Mary.<br><br>Gerard MacMichael recalls a visit with Jack and Maureen Bergin to Co. Down, to a 'friend of Jack's from the war.' His name was Bob McCandless. From National Archives War Medal records, there was a Robert McCandless who was in the Royal Inniskilling Fusilliers. It might well be the same person. I haven't found a record linking them precisely.</div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="new-life">
+  <div class="wrap">
+    <div class="eyebrow">10 — The Long Way Home</div>
+    <h2>The Long Way Home</h2>
+    <p class="lede">In May 2027, it will be exactly 110 years since Jack went out on that night patrol. Enemy gunfire left his comrades killed or wounded. There is no doubt he fought back. He lay in or near Hook Trench for twelve hours, hoping for an escape back to his own lines. This saved him from a different fate.</p>
+    <p class="lede">His journey back to Belfast happened soon after the Armistice, but after what he had been through, we can also say that he had been as far away from home as a human can get, far off in that place of almost mindless destruction and violence. He went back to Belfast to his parents' house on Eliza Street (now gone) and picked up the pieces of his old life. He married Kate Maguire and they had five children, Hugh, Ita, Gerard, Maureen and Aidan, and lived in St James Drive along the Falls Road. He worked at the Customs Office until he retired (his RIC and war record were an advantage for a Catholic back then).</p>
+    <div class="img-pair">
+      <div>
+        <a class="doc-image-link" href="Images/1005-PHO%201925%20IMG_0004%20-%20KateMaguireBergin%20JackBergin%20Portrush%20copy.jpg" target="_blank" rel="noopener">
+          <img class="doc-image" src="Images/1005-PHO%201925%20IMG_0004%20-%20KateMaguireBergin%20JackBergin%20Portrush%20copy.jpg" alt="Kate Maguire and Jack Bergin, Portrush, 1925">
+        </a>
+        <div class="doc-image-hint">Jack and Kate some time before the war. Around 1912 perhaps.</div>
+      </div>
+      <div>
+        <a class="doc-image-link" href="Images/1010-PHO%20-%20Jack%20at%20Customs%20IMG_0029.jpg" target="_blank" rel="noopener">
+          <img class="doc-image" src="Images/1010-PHO%20-%20Jack%20at%20Customs%20IMG_0029.jpg" alt="Jack Bergin at the Customs Office">
+        </a>
+        <div class="doc-image-hint">Jack in Custom's Officer uniform, Belfast</div>
+      </div>
+    </div>
+    <p class="lede">His five children went on to have twenty grandchildren and they in turn, 53 great-grandchildren, a total of seventy-eight descendants in three generations. A fourth generation is still being added to.</p>
+    <p class="lede">The two years of Jack's war were a tumultuous and dreadful time. He never really spoke about his experiences, a word here and there, a note in the margins of a book. The facts are written down on paper, downloaded at the click of a button, but a clear picture remains elusive. Let these fugitive pieces of the past we have gathered stand as a memorial to Jacks' life, and to Sgt. Bergin's six dark days in May 1917.</p>
+    <div class="gallery" style="grid-template-columns:1fr;">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap rule-top">
+    A GREAT WAR STORY — J.J. "JACK" BERGIN, SERVICE No. 29328, ROYAL INNISKILLING FUSILIERS.<br><br>
+    SOURCES: PERSONAL ARCHIVE · TNA WO 95/2305/2 (1ST BN. R. INNIS. FUS. WAR DIARY) · ICRC PRISONERS OF THE FIRST WORLD WAR ARCHIVE (BOTH NATIONAL ARCHIVES)· COMMONWEALTH WAR GRAVES COMMISSION · IRELAND CENSUS 1901, 1911, 1926 · CONSTABULARY GAZETTE · WEEKLY TELEGRAPH · TRENCH MAPPER · GOOGLE EARTH · IMPERIAL WAR MUSEUM.<br><br>
+    RESEARCHED &amp; COMPILED BY HIS FAMILY, 2026.
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navMenu.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  const arrasVideo = document.getElementById('arrasVideo');
+  if (arrasVideo) {
+    arrasVideo.addEventListener('play', () => {
+      if (document.fullscreenElement) return;
+      const request = arrasVideo.requestFullscreen || arrasVideo.webkitRequestFullscreen;
+      if (request) request.call(arrasVideo);
+    });
+  }
+
+  const els = document.querySelectorAll('section, header');
+  els.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+  }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+  els.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
