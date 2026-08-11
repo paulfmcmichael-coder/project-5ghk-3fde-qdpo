@@ -27,7 +27,7 @@
 
   * { box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: auto; }
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -86,13 +86,21 @@
   nav a { text-decoration: none; color: var(--ink-soft); }
   nav a:hover { color: var(--stamp-red); }
 
-  .menu-toggle {
-    display: flex; align-items: center; gap: 8px;
-    background: none; border: 1px solid var(--ink); color: var(--ink-soft);
-    font-family: var(--type); font-size: 11.5px; letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 7px 14px; cursor: pointer;
-  }
+.menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-label {
+  font-family: var(--type);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--stamp-red);
+  white-space: nowrap;
+}
+
   .menu-toggle:hover { color: var(--stamp-red); border-color: var(--stamp-red); }
   .menu-icon { font-size: 14px; line-height: 1; }
 
@@ -108,7 +116,7 @@
   .nav-menu li:first-child { border-top: 1px solid var(--rule); }
   .nav-menu a {
     display: block; padding: 13px 28px;
-    font-family: var(--type); font-size: 12px; letter-spacing: 0.05em;
+    font-family: var(--type); font-size: 13px; letter-spacing: 0.05em;
     text-transform: uppercase;
   }
   .nav-menu a:hover { background: rgba(155, 50, 38, 0.06); }
@@ -159,7 +167,7 @@
   .hero-sub b { color: var(--ink); font-weight: 600; }
 
   /* ---------- SECTION SCAFFOLD ---------- */
-  section { padding: 70px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 60px; }
+  section { padding: 70px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 0px; }
   section:last-of-type { border-bottom: none; }
   h2 {
     font-family: var(--serif);
@@ -170,7 +178,7 @@
   .lede { font-size: 18px; color: var(--ink-soft); max-width: 620px; margin-bottom: 8px; }
   .note {
     font-family: var(--type);
-    font-size: 12.5px;
+    font-size: 14px;
     color: var(--ink-faint);
     border-left: 2px solid var(--rule);
     padding-left: 12px;
@@ -233,7 +241,7 @@
     background: var(--paper); border: 2px solid var(--khaki);
   }
   .t-date {
-    font-family: var(--type); font-size: 12px; color: var(--khaki);
+    font-family: var(--type); font-size: 14px; color: var(--khaki);
     letter-spacing: 0.05em; margin-bottom: 4px;
   }
   .t-title { font-weight: 600; font-size: 18px; margin-bottom: 4px; }
@@ -316,11 +324,11 @@
     box-shadow: 3px 4px 0 rgba(35,32,23,0.12);
   }
   .doc-image-hint {
-    font-family: var(--type); font-size: 11px; color: var(--ink-faint);
+    font-family: var(--type); font-size: 14px; color: var(--ink-faint);
     margin-top: 6px;
   }
   .image-note {
-    font-family: var(--serif); font-size: 14.5px; color: var(--ink-soft);
+    font-family: var(--serif); font-size: 16px; color: var(--ink-soft);
     line-height: 1.5; margin-top: 8px;
   }
   .video-thumb { max-width: 360px; }
@@ -384,7 +392,7 @@
   .excerpt cite {
     display: block; margin-top: 12px;
     font-family: var(--type); font-style: normal;
-    font-size: 11.5px; color: var(--ink-faint);
+    font-size: 14px; color: var(--ink-faint);
   }
 
   /* ---------- INLINE FLAG ---------- */
@@ -402,13 +410,13 @@
     border-left: 2px solid var(--khaki-light);
     padding: 4px 0 4px 16px;
     margin: 18px 0;
-    font-size: 14.5px;
+    font-size: 16px;
   }
   .conjecture .conjecture-label {
     display: block;
     font-family: var(--type);
     font-style: normal;
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--khaki);
@@ -464,19 +472,31 @@
   }
 
   /* ---------- REVEAL ---------- */
-  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal {
+    opacity: 0;
+    transform: none;
+    transition: opacity 0.6s ease;
+}
+
+.reveal.in {
+    opacity: 1;
+}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="wrap">
-    <span class="brand">SIX DAYS IN MAY - J.J. BERGIN IN THE GREAT WAR</span>
+ <div class="wrap">
+  <span class="brand">SIX DAYS IN MAY - J.J. BERGIN IN THE GREAT WAR</span>
+
+  <div class="menu-wrapper">
+    <span class="menu-label">CHAPTERS ►</span>
+
     <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navMenu">
-      <span class="menu-icon">☰</span> Menu
+      <span class="menu-icon">☰</span> Contents
     </button>
   </div>
+</div>
   <ul class="nav-menu" id="navMenu">
     <li><a href="#enlistment">Enlistment</a></li>
     <li><a href="#training">Training</a></li>
@@ -502,7 +522,7 @@
 <section id="enlistment">
   <div class="wrap">
     <div class="eyebrow">01 — Enlistment</div>
-    <h2>Before Enlistment</h2>
+    <h2>Joining Up</h2>
     <div class="img-pair">
       <div>
         <div class="doc-image-hint">1904</div>
@@ -540,7 +560,7 @@
       <br>
       Source: War Medal Roll - UK National Archives
     </div>
-    <div class="doc-image-hint" style="margin-top: 12px;">Tap or click to view all images full size</div>
+    <div class="doc-image-hint" style="margin-top: 12px;">[Tap or click to view all images full size]</div>
     <a class="doc-image-link" href="Images/210-DOC-Medal%20roll%20both%20men%20in%201st%20Bn%20Natl%20Arch%20copy.png" target="_blank" rel="noopener">
       <img class="doc-image" src="Images/210-DOC-Medal%20roll%20both%20men%20in%201st%20Bn%20Natl%20Arch%20copy.png" alt="War Medal Roll entry, 1st Battalion, UK National Archives">
     </a>
@@ -551,7 +571,7 @@
 <section id="training">
   <div class="wrap">
     <div class="eyebrow">02 — Training in Dublin</div>
-    <h2>Timeline - training &amp; deployment to France</h2>
+    <h2>Jack's Timeline</h2>
     <div class="timeline">
       <div class="t-item">
         <div class="t-date">MAY 1916</div>
@@ -605,7 +625,7 @@
 <section id="before-arras">
   <div class="wrap">
     <div class="eyebrow">03 — Before Arras</div>
-    <h2>Before Arras</h2>
+    <h2>Before The Battle</h2>
     <p class="lede">The map below is an overview of the front lines, showing major changes in the Western Front during the war. Amiens was briefly captured by the Germans in 1914 but quickly retaken. Note the big change in the front lines around the Somme in 1916. The front line in early 1917 ran just east of Arras, but crucially, Monchy-le-Preux was in German hands.</p>
     <p class="lede">The second map is a Google map view showing areas where the 1st Battalion were billeted or fought, using details from 1st Bn. regimental war diary. In January, the regiment was generally around Amiens. In February and March, it was at the Somme battlefields. In April, it moved to the Arras sector in preparation for the attack on the German Hindenburg line, which ran north to south just to the east of Arras but just west of Monchy-le-Preux.</p>
     <div class="excerpt">
@@ -666,7 +686,7 @@
 <section id="arras">
   <div class="wrap">
     <div class="eyebrow">04 — Arras</div>
-    <h2>Arras</h2>
+    <h2>Battle Commences</h2>
     <div class="gallery" style="grid-template-columns:1fr;">
     <div>
       <div class="doc-image-hint">Moving in time and space from Arras to Monchy-le-Preux to a particular spot on front line of 14 May 1917.</div>
