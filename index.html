@@ -167,7 +167,7 @@
   .hero-sub b { color: var(--ink); font-weight: 600; }
 
   /* ---------- SECTION SCAFFOLD ---------- */
-  section { padding: 70px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 0px; }
+  section { padding: 70px 0; border-bottom: 1px solid var(--rule); scroll-margin-top: 90px; }
   section:last-of-type { border-bottom: none; }
   h2 {
     font-family: var(--serif);
@@ -1175,10 +1175,16 @@
     const isOpen = navMenu.classList.toggle('open');
     menuToggle.setAttribute('aria-expanded', String(isOpen));
   });
-  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    navMenu.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  }));
+    navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = a.getAttribute('href');
+        navMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        setTimeout(() => {
+          const target = document.querySelector(targetId);
+          if (target) target.scrollIntoView({ behavior: 'auto', block: 'start' });
+        }, 260);
+      }));
 
   const els = document.querySelectorAll('section, header');
   els.forEach(el => el.classList.add('reveal'));
